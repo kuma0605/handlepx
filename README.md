@@ -1,10 +1,10 @@
 # divide (x)px to half (x/2)px
 
-##install
+## install
 npm i pxtohalf -g
 
-##usage
+## usage
 pxtohalf s folderName cssFileExtension cssUnit
-###exmaple
+### exmaple
 pxtohalf s src/css scss px
  
