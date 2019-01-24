@@ -1,0 +1,31 @@
+{
+  "name": "pxtohalf",
+  "version": "1.0.6",
+  "description": "said as title",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dingchao",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuma0605/pxtohalf.git"
+  },
+  "keywords": [
+    "px",
+    "to",
+    "half"
+  ],
+  "bugs": {
+    "url": "https://github.com/kuma0605/pxtohalf/issues"
+  },
+  "homepage": "https://github.com/kuma0605/pxtohalf#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0"
+  },
+  "bin": {
+    "pxtohalf": "./bin/pxtohalf.js"
+  }
+}
