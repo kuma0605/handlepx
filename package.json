@@ -15,7 +15,8 @@
   "keywords": [
     "px",
     "to",
-    "half"
+    "half",
+    "divide"
   ],
   "bugs": {
     "url": "https://github.com/kuma0605/pxtohalf/issues"
