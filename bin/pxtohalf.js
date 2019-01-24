@@ -6,10 +6,11 @@ process.title = 'pxtohalf'
 
 program.version('v' + require('../package.json').version)  
       .description('divide px to half')  
-      .command('specify <dir> <extension>')  
+      .usage('pxtohalf action [dir] [ext]')
+      .command('action [dir] [ext] ')  
       .alias('s')  
-      .action(function(dir, extension){
-        pxtohalf(dir, extension);
+      .action(function(dir, ext){
+        pxtohalf(dir, ext);
       });  
        
 program.parse(process.argv)  

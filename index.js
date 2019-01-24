@@ -11,7 +11,7 @@ require('chalk')
  * 文件遍历方法
  * @param filePath 需要遍历的文件路径
  */
-function pxtohalf(filePath=path.resolve(__dirname), extension='css'){
+function pxtohalf(filePath=__dirname, extension='css', unit='px'){
     console.log('into', filePath, extension)
     //根据文件路径读取文件，返回文件列表
     fs.readdir(filePath,function(err,files){
@@ -36,7 +36,7 @@ function pxtohalf(filePath=path.resolve(__dirname), extension='css'){
                                 // console.log(file)
                                 let res = file.replace(/(\d+(\.\d+)?)px/g, function(full, match1, match2){
                                   console.log('divide', match1, 'into', match1/2);
-                                  if(full==='1px')return full;
+                                  if(full===`1px`)return full;
                                   return match1/2+'px';
                                 })
                                 fs.writeFile(filedir, res, 'utf8', function (err) {

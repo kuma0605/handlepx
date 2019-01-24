@@ -4,7 +4,7 @@
 npm i pxtohalf -g
 
 ## usage
-pxtohalf s folderName cssFileExtension cssUnit
+pxtohalf action folderName cssFileExtension 
 ### exmaple
-pxtohalf s src/css scss px
+pxtohalf action ./css scss 
  
