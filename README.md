@@ -10,16 +10,14 @@ pxtohalf go [folderPath] [cssFileExtension]
 1px will not be converted.
 
 ### arguments
-#### folderPath 
-optional
+##### folderPath : optional
 default: __dirname
 
-#### cssFileExtension
-optional
+##### cssFileExtension : optional
 default: css
 
-### exmaple
-pxtohalf go ./css scss 
+#### exmaple
+pxtohalf go ./ scss 
 
 
  
