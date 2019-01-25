@@ -9,8 +9,8 @@ function isDirectory(filePath){
 function doDivide(filedir){
   fs.readFile(filedir,'utf-8',function(err, file){
       let res = file.replace(/(\d+(\.\d+)?)px/g, function(full, match1, match2){
-        console.log(full, match1, match2);
         if(full==='1px')return full;
+        console.log('divide', match1, 'into', match1/2);
         return match1/2+'px';
       })
       fs.writeFile(filedir, res, 'utf8', function (err) {
