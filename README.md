@@ -12,7 +12,7 @@ pxtohalf go [folderPath/filePath] [cssFileExtension]
 ### arguments
 ##### folderPath/filePath : optional
 default: __dirname
-######You can ignore cssFileExtesion If you specify filePath.
+###### You can ignore cssFileExtesion If you specify filePath.
 
 ##### cssFileExtension : optional
 default: css
