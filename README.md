@@ -4,17 +4,17 @@
 npm i pxtohalf -g
 
 ## usage          
-pxtohalf go folderPath cssFileExtension
+pxtohalf go [folderPath] [cssFileExtension]
 
 ## Note:
 1px will not be converted.
 
 ### arguments
 #### folderPath 
-default: __dirname
+optional, default: __dirname
 
 #### cssFileExtension
-default: css
+optional, default: css
 
 ### exmaple
 pxtohalf go ./css scss 
