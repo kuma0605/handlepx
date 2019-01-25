@@ -25,7 +25,7 @@ function pxtohalf(filePath=__dirname, extension='css', unit='px'){
                 //根据文件路径获取文件信息，返回一个fs.Stats对象
                 fs.stat(filedir,function(eror,stats){
                     if(eror){
-                        console.warn('获取文件stats失败');
+                        console.warn('fail to access stats');
                     }else{
                         var isFile = stats.isFile();//是文件
                         var isDir = stats.isDirectory();//是文件夹
@@ -35,8 +35,8 @@ function pxtohalf(filePath=__dirname, extension='css', unit='px'){
                               fs.readFile(filedir,'utf-8',function(err, file){
                                 // console.log(file)
                                 let res = file.replace(/(\d+(\.\d+)?)px/g, function(full, match1, match2){
+                                  if(full==="1px")return full;
                                   console.log('divide', match1, 'into', match1/2);
-                                  if(full===`1px`)return full;
                                   return match1/2+'px';
                                 })
                                 fs.writeFile(filedir, res, 'utf8', function (err) {
