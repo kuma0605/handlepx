@@ -1,7 +1,7 @@
 #!/usr/bin/env node  
 var pxtohalf = require('../index.js').pxtohalf  
 var program = require('commander');  
-require('chalk')
+
 process.title = 'pxtohalf'
 
 program.version('v' + require('../package.json').version)  
