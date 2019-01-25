@@ -4,13 +4,13 @@
 npm i pxtohalf -g
 
 ## usage          
-pxtohalf go [folderPath/filename] [cssFileExtension]
+pxtohalf go [folderPath] [cssFileExtension]
 
 ## Note:
 1px will not be converted.
 
 ### arguments
-#### folderPath/filename 
+#### folderPath 
 optional
 default: __dirname
 
