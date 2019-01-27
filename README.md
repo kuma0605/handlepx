@@ -1,5 +1,7 @@
 # divide css value with unit(px) into half 
 
+## A CLI tool not a loader
+
 ## install
 npm i pxtohalf -g
 
