@@ -26,7 +26,7 @@ default: 0.5
 
 ## exmaple
 1. handlepx go ./ scss 0.5
-2. handlepx go ./common.scss 0.5
+2. handlepx go ./common.scss scss 0.5
 
 
  
