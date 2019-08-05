@@ -1,8 +1,8 @@
 #!/usr/bin/env node  
-var pxtohalf = require('../index.js').pxtohalf  
+var handlepx = require('../index.js').handlepx  
 var program = require('commander');  
 
-process.title = 'pxtohalf'
+process.title = 'handlepx'
 
 program.version('v' + require('../package.json').version)  
       .description('divide px to half')  
@@ -10,7 +10,7 @@ program.version('v' + require('../package.json').version)
       .command('go [dir] [ext] [factor]')  
       .alias('g')  
       .action(function(dir, ext, factor){
-        pxtohalf(dir, ext, factor);
+        handlepx(dir, ext, factor);
       });  
        
 program.parse(process.argv)  

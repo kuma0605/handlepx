@@ -10,7 +10,7 @@ function doDivide(filedir, factor){
   fs.readFile(filedir,'utf-8',function(err, file){
       console.log('into', filedir)
       let res = file.replace(/(\d+(\.\d+)?)px/g, function(full, match1, match2){
-        if(full==='1px')return full;
+        // if(full==='1px')return full;
         console.log('divide', match1, 'into', match1*factor);
         return match1*factor+'px';
       })
@@ -24,7 +24,7 @@ function doDivide(filedir, factor){
  * 文件遍历方法
  * @param filePath 需要遍历的文件路径
  */
-function pxtohalf(filePath=__dirname, extension='css', factor=0.5){
+function handlepx(filePath=__dirname, extension='css', factor=0.5){
   if(isDirectory(filePath)){
     fs.readdir(filePath,function(err,files){
         if(err){
@@ -36,7 +36,7 @@ function pxtohalf(filePath=__dirname, extension='css', factor=0.5){
                 let filedir = path.join(filePath,filename);
                 let stat = fs.lstatSync(filedir);
                 if(stat.isDirectory()){
-                  pxtohalf(filedir, extension)
+                  handlepx(filedir, extension)
                 }else{
                     if(filename.includes('.'+extension)){
                         doDivide(filedir, factor);
@@ -46,8 +46,8 @@ function pxtohalf(filePath=__dirname, extension='css', factor=0.5){
         }
     })
   }else{
-    doDivide(filePath)
+    doDivide(filePath, factor)
   }
 }
 
-module.exports.pxtohalf=pxtohalf;
+module.exports.handlepx=handlepx;

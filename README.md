@@ -1,15 +1,16 @@
-# divide css value with unit(px) into half 
+# handle css value with unit(px) 
+# multiply value with factor 
 
 ## A CLI tool not a loader
 
 ## install
-npm i pxtohalf -g
+npm i handlepx -g
 
 ## usage          
-pxtohalf go [directory/filePath] [fileExtension]
+handlepx go [directory/filePath] [fileExtension] [factor]
 
 ## Note:
-1px will not be converted.
+1px will be converted.
 
 ## arguments
 ### directory/filePath : optional
@@ -20,9 +21,12 @@ default: __dirname
 ### fileExtension : optional
 default: css
 
+### factor : optional
+default: 0.5
+
 ## exmaple
-1. pxtohalf go ./ scss 
-2. pxtohalf go ./common.scss
+1. handlepx go ./ scss 0.5
+2. handlepx go ./common.scss 0.5
 
 
  

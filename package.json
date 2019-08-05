@@ -1,6 +1,6 @@
 {
-  "name": "pxtohalf",
-  "version": "1.0.19",
+  "name": "handlepx",
+  "version": "1.1.2",
   "description": "said as title",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kuma0605/pxtohalf.git"
+    "url": "git+https://github.com/kuma0605/handlepx.git"
   },
   "keywords": [
     "px",
@@ -19,14 +19,14 @@
     "divide"
   ],
   "bugs": {
-    "url": "https://github.com/kuma0605/pxtohalf/issues"
+    "url": "https://github.com/kuma0605/handlepx/issues"
   },
-  "homepage": "https://github.com/kuma0605/pxtohalf#readme",
+  "homepage": "https://github.com/kuma0605/handlepx#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.19.0"
   },
   "bin": {
-    "pxtohalf": "./bin/pxtohalf.js"
+    "handlepx": "./bin/handlepx.js"
   }
 }
