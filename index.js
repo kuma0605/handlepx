@@ -36,7 +36,7 @@ function handlepx(filePath=__dirname, extension='css', factor=0.5){
                 let filedir = path.join(filePath,filename);
                 let stat = fs.lstatSync(filedir);
                 if(stat.isDirectory()){
-                  handlepx(filedir, extension)
+                  handlepx(filedir, extension, factor)
                 }else{
                     if(filename.includes('.'+extension)){
                         doDivide(filedir, factor);
