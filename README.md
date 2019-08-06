@@ -11,9 +11,9 @@ multiply value with factor
 
 ### option
     -E --exclude_1px 
-    -P --postfix // list e.g. css,less,sass
-    -F --factor 
-    -U --unit [value] default: px
+    -P --postfix [items] // list e.g. css,less,sass
+    -F --factor [value] // integer , default: 0.5
+    -U --unit [value] // default: px
 
 ## Note:
 1px will be converted by default.
