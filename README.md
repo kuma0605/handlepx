@@ -10,7 +10,8 @@ npm i handlepx -g
 handlepx go directory/filePath fileExtension [factor]
 
 ## Note:
-1px will be converted.
+1px will be converted by default.
+To exclude 1px, you can add option -E/--exclude_1px.
 
 ## arguments
 ### directory/filePath : required
@@ -26,7 +27,7 @@ default: 0.5
 
 ## exmaple
 1. handlepx go ./ scss 0.5
-2. handlepx go ./common.scss scss 0.5
+2. handlepx go -E ./common.scss scss 0.5
 
 
  
