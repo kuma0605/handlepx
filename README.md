@@ -4,10 +4,10 @@
 ## A CLI tool not a loader
 
 ## install
-npm i handlepx -g
+    npm i handlepx -g
 
 ## usage          
-handlepx go <directory/filePath>
+    handlepx go <directory/filePath>
 
 ### option
     -E --exclude_1px 
@@ -26,8 +26,8 @@ default: __dirname
 ###### You can ignore cssFileExtesion when you specify filePath.
 
 ## exmaple
-1. handlepx go -P scss -F 2 ./ 
-2. handlepx go -E ./common.scss 
+    1. handlepx go -P scss -F 2 ./ 
+    2. handlepx go -E ./common.scss 
 
 
  
