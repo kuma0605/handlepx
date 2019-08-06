@@ -11,6 +11,8 @@ handlepx go directory/filePath fileExtension [factor]
 
 ### option
 -E --exclude_1px 
+-P --postfix 后缀名
+-F --factor 系数
 
 ## Note:
 1px will be converted by default.
