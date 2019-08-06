@@ -10,9 +10,9 @@ npm i handlepx -g
 handlepx go <directory/filePath>
 
 ### option
--E --exclude_1px 
--P --postfix 后缀名
--F --factor 系数
+    -E --exclude_1px 
+    -P --postfix 后缀名
+    -F --factor 系数
 
 ## Note:
 1px will be converted by default.
