@@ -11,8 +11,8 @@ multiply value with factor
 
 ### option
     -E --exclude_1px 
-    -P --postfix 后缀名
-    -F --factor 系数
+    -P --postfix 
+    -F --factor 
 
 ## Note:
 1px will be converted by default.
