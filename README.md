@@ -7,7 +7,7 @@
 npm i handlepx -g
 
 ## usage          
-handlepx go directory/filePath fileExtension [factor]
+handlepx go <directory/filePath>
 
 ### option
 -E --exclude_1px 
@@ -25,15 +25,9 @@ default: __dirname
 ###### relative/absolute path both works.
 ###### You can ignore cssFileExtesion when you specify filePath.
 
-### fileExtension : required
-default: css
-
-### factor : optional
-default: 0.5
-
 ## exmaple
-1. handlepx go ./ scss 0.5
-2. handlepx go -E ./common.scss scss 0.5
+1. handlepx go -P scss -F 2 ./ 
+2. handlepx go -E ./common.scss 
 
 
  
