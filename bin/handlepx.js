@@ -16,7 +16,7 @@ program.version('v' + require('../package.json').version)
       .alias('g')  
       .option('-E --exclude_1px')
       .option('-P --postfix <items>','A list', list)
-      .option('-F --factor <value>', 'A integer')
+      .option('-F --factor <value>', 'A integer/float')
       .option('-U --unit <value>', 'A string')
       .action(function(dir, options){
 
