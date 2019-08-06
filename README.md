@@ -1,5 +1,5 @@
 # handle css value with unit(px) 
-# multiply value with factor 
+multiply value with factor 
 
 ## A CLI tool not a loader
 
