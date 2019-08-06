@@ -7,18 +7,18 @@
 npm i handlepx -g
 
 ## usage          
-handlepx go [directory/filePath] [fileExtension] [factor]
+handlepx go directory/filePath fileExtension [factor]
 
 ## Note:
 1px will be converted.
 
 ## arguments
-### directory/filePath : optional
+### directory/filePath : required
 default: __dirname
 ###### relative/absolute path both works.
 ###### You can ignore cssFileExtesion when you specify filePath.
 
-### fileExtension : optional
+### fileExtension : required
 default: css
 
 ### factor : optional
