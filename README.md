@@ -7,13 +7,14 @@
 npm i handlepx -g
 
 ## usage          
-handlepx go <directory/filePath> <fileExtension> [factor]
+handlepx go directory/filePath fileExtension [factor]
 
 ### option
 -E --exclude_1px 
 
 ## Note:
 1px will be converted by default.
+## exclude 1px
 To exclude 1px, you can add option -E/--exclude_1px.
 
 ## arguments
