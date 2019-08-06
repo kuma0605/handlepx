@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var options = {
   exclude_1px: false,
-  extension: 'css',
+  postfix: ['css'],
   factor: 0.5,
   unit:'px'
 }
@@ -45,10 +45,11 @@ function handlepx(filePath = __dirname) {
           //get absolute path
           let filedir = path.join(filePath, filename);
           let stat = fs.lstatSync(filedir);
+          
           if (stat.isDirectory()) {
             handlepx(filedir)
           } else {
-            if (filename.includes('.' + options.extension)) {
+            if ( options.postfix.includes(path.extname(filename).slice(1))) {
               doMultiply(filedir);
             }
           }

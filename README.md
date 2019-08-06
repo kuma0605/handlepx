@@ -11,7 +11,7 @@ multiply value with factor
 
 ### option
     -E --exclude_1px 
-    -P --postfix 
+    -P --postfix // list e.g. css,less,sass
     -F --factor 
     -U --unit [value] default: px
 
@@ -27,8 +27,13 @@ default: __dirname
 ###### You can ignore cssFileExtesion when you specify filePath.
 
 ## exmaple
-    1. handlepx go -P scss -F 2 ./ 
-    2. handlepx go -E ./common.scss 
+    1. 当前目录下 后缀 scss， 系数2
+        handlepx go -P scss -F 2 ./ 
+    2. 当前目录下common.scss文件，不处理1px
+        handlepx go -E ./common.scss 
+    3. test目录下 scss 和 css文件
+        handlepx go -P scss,css ./test
+
 
 
  
