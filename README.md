@@ -1,4 +1,4 @@
-# handle css value with unit(px) 
+# handle css value with unit
 multiply value with factor 
 
 ## A CLI tool not a loader
@@ -13,6 +13,7 @@ multiply value with factor
     -E --exclude_1px 
     -P --postfix 
     -F --factor 
+    -U --unit [value] default: px
 
 ## Note:
 1px will be converted by default.
