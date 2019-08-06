@@ -33,6 +33,8 @@ default: __dirname
         handlepx go -E ./common.scss 
     3. test目录下 scss 和 css文件
         handlepx go -P scss,css ./test
+    4. 指定修改rem单位
+        handlepx go -U rem ./
 
 
 
