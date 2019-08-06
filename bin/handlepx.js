@@ -1,15 +1,18 @@
 #!/usr/bin/env node  
 var handlepx = require('../index.js').handlepx  
+var custom_options = require('../index.js').options 
 var program = require('commander');  
 
 process.title = 'handlepx'
 
 program.version('v' + require('../package.json').version)  
-      .description('divide px to half')  
-      .usage('go [dir] [ext] [factor]')
-      .command('go [dir] [ext] [factor]')  
+      .description('multiply px to half')  
+      .usage('go <dir> <ext> [factor]')
+      .command('go <dir> <ext> [factor]')  
       .alias('g')  
-      .action(function(dir, ext, factor){
+      .option('-E --exclude_1px')
+      .action(function(dir, ext, factor, options){
+        custom_options.exclude_1px = options.exclude_1px;
         handlepx(dir, ext, factor);
       });  
        
