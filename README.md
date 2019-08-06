@@ -7,7 +7,7 @@
 npm i handlepx -g
 
 ## usage          
-handlepx go directory/filePath fileExtension [factor]
+handlepx go [-E] <directory/filePath> <fileExtension> [factor]
 
 ## Note:
 1px will be converted by default.
