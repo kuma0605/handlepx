@@ -14,10 +14,12 @@ program.version('v' + require('../package.json').version)
       .usage('go <dir> ')
       .command('go <dir> ')  
       .alias('g')  
-      .option('-E --exclude_1px')
-      .option('-P --postfix <items>','A list', list)
+      .option('-X --exclude_1px')
+      .option('-E --postfix <items>','A list', list)
       .option('-F --factor <value>', 'A integer/float', parseFloat)
       .option('-U --unit <value>', 'A string')
+      .option('-N --negative')
+      .option('-P --positive')
       .action(function(dir, options){
 
         custom_options.exclude_1px = options.exclude_1px;

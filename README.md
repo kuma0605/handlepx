@@ -15,15 +15,17 @@ multiply value with factor
     handlepx go <directory/filePath>
 
 ### option
-    -E --exclude_1px 
-    -P --postfix [items] // list, e.g. css,less,sass, default: css
+    -X --exclude_1px 
+    -E --postfix [items] // list, e.g. css,less,sass, default: css
     -F --factor [value] // integer/float , default: 0.5
     -U --unit [value] // default: px
+    -N --negative //only convert negative value
+    -P --positive //only convert postivie value
 
 ## Note:
 1px will be converted by default.
 ## exclude 1px
-To exclude 1px, you can add option -E/--exclude_1px.
+To exclude 1px, you can add option -X/--exclude_1px.
 
 ## arguments
 ### directory/filePath : required
@@ -33,11 +35,11 @@ default: __dirname
 
 ## exmaple
     1. extension:scss， factor:2
-        handlepx go -P scss -F 2 ./ 
+        handlepx go -E scss -F 2 ./ 
     2. exclude 1px
-        handlepx go -E ./common.scss 
+        handlepx go -X ./common.scss 
     3. convert both scss and css
-        handlepx go -P scss,css ./test
+        handlepx go -E scss,css ./test
     4. convert rem unit
         handlepx go -U rem ./
 

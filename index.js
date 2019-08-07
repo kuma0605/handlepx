@@ -5,7 +5,9 @@ var options = {
   exclude_1px: false,
   postfix: ['css'],
   factor: 0.5,
-  unit:'px'
+  unit:'px',
+  negative:false,
+  positive:false
 }
 
 function isDirectory(filePath) {
@@ -20,8 +22,14 @@ function doMultiply(filedir) {
     console.log('into ',chalk.blue(filedir))
     // let res = file.replace(/(\d+(\.\d+)?)px/g, function (full, match1, match2) {
     // let res = file.replace(new RegExp("(\\d+(\\.\\d+)?)"+unit, 'g'), function (full, match1, match2) {
-    let pattern = "(-?\\d+(\\.\\d+)?)"+unit;
-    let res = file.replace(new RegExp(pattern, 'g'), function (full, match1, match2) {
+    let pattern = "(-?\\d+(\\.\\d+)?)";
+    if(options.negative){
+      pattern = "(-\\d+(\\.\\d+)?)";
+    }
+    if(options.positive){
+      pattern = "(\\d+(\\.\\d+)?)";
+    }
+    let res = file.replace(new RegExp(pattern + unit, 'g'), function (full, match1, match2) {
       if (options.exclude_1px && full === '1'+ unit) return full;
       console.log('multiply', chalk.green(match1), 'into', chalk.magentaBright(match1 * factor));
       return match1 * factor + unit;
