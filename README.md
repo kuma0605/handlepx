@@ -35,13 +35,13 @@ default: __dirname
 
 ## exmaple
     1. extension:scss， factor:2
-        handlepx go -E scss -F 2 ./ 
+        handlepx go ./ -E scss -F 2 
     2. exclude 1px
-        handlepx go -X ./common.scss 
+        handlepx go ./common.scss -X 
     3. convert both scss and css
-        handlepx go -E scss,css ./test
+        handlepx go ./test -E scss,css
     4. convert rem unit
-        handlepx go -U rem ./
+        handlepx go ./ -U rem
 
 
 
