@@ -12,7 +12,7 @@ multiply value with factor
     "(-?\\d+(\\.\\d+)?)"
 
 ## usage          
-    handlepx go <directory/filePath>
+    handlepx go <directory/filePath> [options]
 
 ### option
     -X --exclude_1px 
