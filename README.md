@@ -6,6 +6,11 @@ multiply value with factor
 ## install
     npm i handlepx -g
 
+## desc
+    will convert match value to value*factor
+### match pattern
+    "(-?\\d+(\\.\\d+)?)"
+
 ## usage          
     handlepx go <directory/filePath>
 
