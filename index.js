@@ -19,7 +19,9 @@ function doMultiply(filedir) {
   fs.readFile(filedir, 'utf-8', function (err, file) {
     console.log('into ',chalk.blue(filedir))
     // let res = file.replace(/(\d+(\.\d+)?)px/g, function (full, match1, match2) {
-    let res = file.replace(new RegExp("(\\d+(\\.\\d+)?)"+unit, 'g'), function (full, match1, match2) {
+    // let res = file.replace(new RegExp("(\\d+(\\.\\d+)?)"+unit, 'g'), function (full, match1, match2) {
+    let pattern = "(-?\\d+(\\.\\d+)?)"+unit;
+    let res = file.replace(new RegExp(pattern, 'g'), function (full, match1, match2) {
       if (options.exclude_1px && full === '1'+ unit) return full;
       console.log('multiply', chalk.green(match1), 'into', chalk.magentaBright(match1 * factor));
       return match1 * factor + unit;
