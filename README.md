@@ -1,5 +1,5 @@
 # handle css value with unit
-multiply value with factor 
+multiply value by factor 
 
 ## A CLI tool not a loader
 
@@ -9,7 +9,7 @@ multiply value with factor
 ## desc
     will convert match value to value*factor
 ### match pattern
-    "(-?\\d+(\\.\\d+)?)"
+    "(-?\\d+(\\.\\d+)?)" + unit
 
 ## usage          
     handlepx go <directory/filePath> [options]
