@@ -11,12 +11,12 @@ var options = {
 }
 
 var logfilename = path.join(__dirname,"handlepxlog.txt");
-var createStream = fs.writeFile(logfilename, 'handlepx log', (err)=>{
+fs.writeFile(logfilename, 'handlepx log', (err)=>{
   if(err) {
     return console.log(err);
   }
 });
-createStream.end();
+
 
 function isDirectory(filePath) {
   let stat = fs.lstatSync(filePath);
