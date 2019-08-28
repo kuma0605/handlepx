@@ -26,6 +26,9 @@ function doMultiply(filedir) {
   let unit = options.unit;
   fs.readFile(filedir, 'utf-8', function (err, file) {
     console.log('into ',chalk.blue(filedir))
+    fs.appendFile(logfilename, '\n'+ filedir, (error)  => {
+      if (error) return console.log("追加文件失败" + error.message);
+    })
     // let res = file.replace(/(\d+(\.\d+)?)px/g, function (full, match1, match2) {
     // let res = file.replace(new RegExp("(\\d+(\\.\\d+)?)"+unit, 'g'), function (full, match1, match2) {
     let pattern = "(-?\\d+(\\.\\d+)?)";
