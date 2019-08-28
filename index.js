@@ -10,10 +10,12 @@ var options = {
   positive:false
 }
 
-// create log 
-var fs = require("fs");
 var logfilename = path.join(__dirname,"handlepxlog.txt");
-var createStream = fs.createWriteStream(logfilename);
+var createStream = fs.writeFile(logfilename, 'handlepx log', (err)=>{
+  if(err) {
+    return console.log(err);
+  }
+});
 createStream.end();
 
 function isDirectory(filePath) {
