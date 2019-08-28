@@ -10,9 +10,10 @@ var options = {
   positive:false
 }
 
-var logfilename = path.join(__dirname,"handlepxlog.txt");
+
 
 function createLog(){
+  var logfilename = path.join(__dirname,"handlepxlog.txt");
   fs.writeFileSync(logfilename, 'handlepx log', (err)=>{
     if(err) {
       return console.log(err);
@@ -30,6 +31,7 @@ function isDirectory(filePath) {
 function doMultiply(filedir) {
   let factor = options.factor;
   let unit = options.unit;
+  var logfilename = path.join(__dirname,"handlepxlog.txt");
   fs.readFile(filedir, 'utf-8', function (err, file) {
     console.log('into ',chalk.blue(filedir))
     fs.appendFile(logfilename, '\n'+ filedir, (error)  => {
