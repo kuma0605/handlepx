@@ -1,6 +1,6 @@
 #!/usr/bin/env node  
-var handlepx = require('../index.js').handlepx  
-var custom_options = require('../index.js').options 
+var handlepx = require('../index.js').handlepx;  
+var custom_options = require('../index.js').options; 
 var program = require('commander');  
 
 process.title = 'handlepx'

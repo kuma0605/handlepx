@@ -10,6 +10,12 @@ var options = {
   positive:false
 }
 
+// create log 
+var fs = require("fs");
+var logfilename = path.join(__dirname,"handlepxlog.txt");
+var createStream = fs.createWriteStream(logfilename);
+createStream.end();
+
 function isDirectory(filePath) {
   let stat = fs.lstatSync(filePath);
   return stat.isDirectory()
@@ -32,6 +38,9 @@ function doMultiply(filedir) {
     let res = file.replace(new RegExp(pattern + unit, 'g'), function (full, match1, match2) {
       if (options.exclude_1px && full === '1'+ unit) return full;
       console.log('multiply', chalk.green(match1), 'into', chalk.magentaBright(match1 * factor));
+      fs.appendFile(logfilename, '\n'+' multiply '+ match1+' into '+ match1 * factor, (error)  => {
+        if (error) return console.log("追加文件失败" + error.message);
+      })
       return match1 * factor + unit;
     })
     fs.writeFile(filedir, res, 'utf8', function (err) {
