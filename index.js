@@ -9,13 +9,16 @@ var options = {
   negative:false,
   positive:false
 }
-console.log(__dirname)
-var logfilename = path.join(__dirname,"handlepxlog.txt");
-fs.writeFileSync(logfilename, 'handlepx log', (err)=>{
-  if(err) {
-    return console.log(err);
-  }
-});
+
+function createLog(){
+  var logfilename = path.join(__dirname,"handlepxlog.txt");
+  fs.writeFileSync(logfilename, 'handlepx log', (err)=>{
+    if(err) {
+      return console.log(err);
+    }
+  });
+}
+
 
 
 function isDirectory(filePath) {
@@ -58,7 +61,11 @@ function doMultiply(filedir) {
  * 文件遍历方法
  * @param filePath 需要遍历的文件路径
  */
-function handlepx(filePath = __dirname) {
+function handlepx(filePath = __dirname){
+  createLog();
+  doHandlepx(filePath);
+}
+function doHandlepx(filePath = __dirname) {
 
   if (isDirectory(filePath)) {
     fs.readdir(filePath, function (err, files) {
@@ -72,7 +79,7 @@ function handlepx(filePath = __dirname) {
           let stat = fs.lstatSync(filedir);
           
           if (stat.isDirectory()) {
-            handlepx(filedir)
+            doHandlepx(filedir)
           } else {
             if ( options.postfix.includes(path.extname(filename).slice(1))) {
               doMultiply(filedir);
