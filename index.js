@@ -9,9 +9,9 @@ var options = {
   negative:false,
   positive:false
 }
-
+console.log(__dirname)
 var logfilename = path.join(__dirname,"handlepxlog.txt");
-fs.writeFile(logfilename, 'handlepx log', (err)=>{
+fs.writeFileSync(logfilename, 'handlepx log', (err)=>{
   if(err) {
     return console.log(err);
   }
