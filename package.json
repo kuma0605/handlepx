@@ -1,6 +1,6 @@
 {
   "name": "handlepx",
-  "version": "1.6.10",
+  "version": "1.6.11",
   "description": "multiply css value by specified factor",
   "main": "index.js",
   "scripts": {

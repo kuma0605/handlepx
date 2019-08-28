@@ -10,8 +10,9 @@ var options = {
   positive:false
 }
 
+var logfilename = path.join(__dirname,"handlepxlog.txt");
+
 function createLog(){
-  var logfilename = path.join(__dirname,"handlepxlog.txt");
   fs.writeFileSync(logfilename, 'handlepx log', (err)=>{
     if(err) {
       return console.log(err);
