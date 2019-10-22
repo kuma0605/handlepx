@@ -21,6 +21,7 @@ multiply value by factor
     -U --unit [value] // default: px
     -N --negative //only convert negative value
     -P --positive //only convert postivie value
+    -R --relace_unit // specify custom unit which will replace unit of -U
 
 ## Note:
 1px will be converted by default.

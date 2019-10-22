@@ -7,7 +7,8 @@ var options = {
   factor: 0.5,
   unit:'px',
   negative:false,
-  positive:false
+  positive:false,
+  replaceUnit: false
 }
 
 var logfilename = "./handlepxlog.txt";
@@ -48,7 +49,7 @@ function doMultiply(filedir) {
       fs.appendFile(logfilename, '\n'+' multiply '+ match1+' into '+ match1 * factor, (error)  => {
         if (error) return console.log("追加文件失败" + error.message);
       })
-      return match1 * factor + unit;
+      return match1 * factor + (options.replace_unit ? options.replace_unit : unit);
     })
     fs.writeFile(filedir, res, 'utf8', function (err) {
       if (err) return console.log(err);
